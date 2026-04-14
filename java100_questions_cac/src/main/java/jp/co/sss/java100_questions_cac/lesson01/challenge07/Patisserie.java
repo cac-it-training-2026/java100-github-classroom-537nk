@@ -41,6 +41,57 @@
 
 package jp.co.sss.java100_questions_cac.lesson01.challenge07;
 
-public class Patisserie {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
+public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		int citronStock = 30;
+		int chocolatStock = 30;
+		int pistacheStock = 30;
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+		System.out.println("シトロン      \\250 ・・・ 残り" + citronStock + "個");
+		System.out.println("ショコラ      \\280 ・・・ 残り" + chocolatStock + "個");
+		System.out.println("ピスターシュ  \\320 ・・・ 残り" + pistacheStock + "個");
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("それぞれ何個ずつかいますか？（最大30個まで）");
+
+		System.out.println("シトロン\t >");
+		String x = reader.readLine();
+		double cit = Double.parseDouble(x);
+
+		System.out.println("ショコラ\t >");
+		String y = reader.readLine();
+		double choco = Double.parseDouble(y);
+
+		System.out.println("ピスターシュ >");
+		String z = reader.readLine();
+		double pista = Double.parseDouble(z);
+
+		System.out.println("\nシトロン\t " + cit + "個");
+		System.out.println("ショコラ\t " + choco + "個");
+		System.out.println("ピスターシュ " + pista + "個");
+
+		double totalstock = cit + choco + pista;
+		int totalcost = (int) (cit * 250 + choco * 280 + pista * 320);
+
+		System.out.println("合計個数\t" + totalstock + "個");
+		System.out.println("合計金額  " + totalcost + "円");
+
+		System.out.println("\nをお買い上げですね。");
+		System.out.println("承りました。");
+
+		int citronRest = citronStock - (int) cit - 1;
+		int chocolatRest = chocolatStock - (int) choco - 1;
+		int pistacheRest = pistacheStock - (int) pista - 1;
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+		System.out.println("シトロン      \\250 ・・・ 残り" + citronRest + "個");
+		System.out.println("ショコラ      \\280 ・・・ 残り" + chocolatRest + "個");
+		System.out.println("ピスターシュ  \\320 ・・・ 残り" + pistacheRest + "個");
+
+	}
 }

@@ -29,6 +29,36 @@
 
 package jp.co.sss.java100_questions_cac.lesson01.challenge05;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("それぞれ何個ずつかいますか？（最大30個まで）");
+
+		System.out.println("シトロン\t >");
+		String x = reader.readLine();
+		int cit = Integer.parseInt(x);
+
+		System.out.println("ショコラ\t >");
+		String y = reader.readLine();
+		int choco = Integer.parseInt(y);
+
+		System.out.println("ピスターシュ >");
+		String z = reader.readLine();
+		int pista = Integer.parseInt(z);
+
+		System.out.println("\nシトロン\t " + cit + "個");
+		System.out.println("ショコラ\t " + choco + "個");
+		System.out.println("ピスターシュ " + pista + "個");
+
+		System.out.println("合計個数\t" + (cit + choco + pista) + "個");
+		System.out.println("合計金額  " + (cit * 250 + choco * 280 + pista * 320) + "円");
+
+		System.out.println("\nをお買い上げですね。");
+		System.out.println("承りました。");
+	}
 
 }

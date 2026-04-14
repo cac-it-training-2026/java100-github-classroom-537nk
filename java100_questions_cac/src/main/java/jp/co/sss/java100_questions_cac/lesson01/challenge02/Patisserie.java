@@ -19,5 +19,12 @@
 package jp.co.sss.java100_questions_cac.lesson01.challenge02;
 
 public class Patisserie {
+	public static void main(String[] args) {
+		System.out.println("本日のおすすめ商品です。\n");
+		System.out.println("シトロン\t \\250");
+		System.out.println("ショコラ\t \\280");
+		System.out.println("ピスターシュ \\320");
+	}
+	//
 
 }
